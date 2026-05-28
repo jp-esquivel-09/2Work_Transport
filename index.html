@@ -1,0 +1,347 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - 2Work Transport Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<style>
+    :root {
+            --primary-color: #1e3a8a;
+            --secondary-color: #f97316;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+        }
+
+        .navbar {
+            background-color: var(--primary-color);
+            padding: 1rem 0;
+        }
+
+        .navbar-brand {
+            color: white !important;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.9) !important;
+            margin: 0 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--secondary-color) !important;
+        }
+
+        .carousel-item {
+            height: 500px;
+        }
+
+        .carousel-item img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+
+        .info-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .info-card i {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-card {
+            background: #f9fafb;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-card .stars {
+            color: #fbbf24;
+            margin-bottom: 1rem;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            margin: 0 0.5rem;
+            transition: background-color 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: var(--secondary-color);
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary-color);
+        }
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-bus"></i> 2Work Transport
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="acerca.html">Acerca de</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="servicios.html">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mapa.html">Ubicación</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="pagina_error_404.html">Iniciar sesión</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="pagina_error_404.html">Registrarse</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contáctenos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SLIDER/CARRUSEL CON IMÁGENES PROPIAS -->
+    <div id="carouselBanner" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carouselBanner" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/bus1.jpg" class="d-block w-100" alt="Bus de lujo 1">
+                <div class="carousel-caption">
+                    <h2>Transporte Ejecutivo de Calidad</h2>
+                    <p>Viaje con comodidad y seguridad a su lugar de trabajo</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/bus2.jpg" class="d-block w-100" alt="Bus de lujo 2">
+                <div class="carousel-caption">
+                    <h2>Flotilla Moderna y Confortable</h2>
+                    <p>Autobuses equipados con la ultima tecnologia</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="images/bus3.jpg" class="d-block w-100" alt="Bus de lujo 3">
+                <div class="carousel-caption">
+                    <h2>Servicio Personalizado</h2>
+                    <p>Rutas disenadas para su comodidad</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselBanner" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselBanner" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Bienvenido a 2Work Transport Services</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <p class="text-center lead">Somos una empresa costarricense especializada en transporte ejecutivo para empresas. Ofrecemos soluciones de movilidad confiables y comodas para que sus colaboradores lleguen a tiempo y descansados a su lugar de trabajo.</p>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-4 mb-4">
+                    <div class="info-card text-center">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Seguridad</h4>
+                        <p>Conductores profesionales y unidades con los mas altos estandares de seguridad</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="info-card text-center">
+                        <i class="fas fa-clock"></i>
+                        <h4>Puntualidad</h4>
+                        <p>Horarios establecidos y cumplimiento de rutas garantizado</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="info-card text-center">
+                        <i class="fas fa-star"></i>
+                        <h4>Confort</h4>
+                        <p>Autobuses de lujo con aire acondicionado, WiFi y asientos reclinables</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Testimonios</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Excelente servicio. Desde que contratamos 2Work Transport, la puntualidad de nuestros empleados mejoro significativamente."</p>
+                        <strong>- Maria Rodriguez, Gerente de RR.HH.</strong>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Los autobuses son muy comodos y los conductores son profesionales. Recomiendo totalmente este servicio."</p>
+                        <strong>- Carlos Mendez, Usuario</strong>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Una solucion perfecta para empresas que valoran el bienestar de sus colaboradores."</p>
+                        <strong>- Ana Solano, Directora Administrativa</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Siguenos en Redes Sociales</h2>
+            <div class="social-links text-center">
+                <a href="https://facebook.com/2worktransport" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com/2worktransport" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/2worktransport" target="_blank"><i class="fab ri-twitter-x-line"></i></a>
+                <a href="https://linkedin.com/company/2worktransport" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://wa.me/50612345678" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5><i class="fas fa-bus"></i> 2Work Transport</h5>
+                    <p>Transporte ejecutivo de calidad para empresas en Costa Rica.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Enlaces Rapidos</h5>
+                    <div class="footer-links">
+                        <a href="index.html">Inicio</a>
+                        <a href="acerca.html">Acerca de</a>
+                        <a href="servicios.html">Servicios</a>
+                        <a href="mapa.html">Ubicacion</a>
+                        <a href="contacto.html">Contactenos</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Contacto</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> San Jose, Costa Rica</p>
+                    <p><i class="fas fa-phone"></i> +506 1234-5678</p>
+                    <p><i class="fas fa-envelope"></i> info@2worktransport.cr</p>
+                </div>
+            </div>
+            <hr style="border-color: rgba(255,255,255,0.1);">
+            <div class="text-center">
+                <p>&copy; 2025 2Work Transport Services. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

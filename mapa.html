@@ -1,0 +1,282 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubicación - 2Work Transport Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --secondary-color: #f97316;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+        }
+
+        .navbar {
+            background-color: var(--primary-color);
+            padding: 1rem 0;
+        }
+
+        .navbar-brand {
+            color: white !important;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.9) !important;
+            margin: 0 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--secondary-color) !important;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 4rem 0;
+            margin-bottom: 3rem;
+        }
+
+        .map-container {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 500px;
+            border-radius: 10px;
+            border: 2px solid #e5e7eb;
+        }
+
+        .map-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .map-link:hover {
+            color: var(--secondary-color);
+        }
+
+        .map-link i {
+            margin-right: 0.5rem;
+        }
+
+        .contact-info-box {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .contact-info-box h4 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info-item {
+            display: flex;
+            align-items: start;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-info-item i {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-right: 1rem;
+            margin-top: 0.2rem;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 0 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .map-container iframe {
+                height: 350px;
+            }
+        }
+    </style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-bus"></i> 2Work Transport
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="acerca.html">Acerca de</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="servicios.html">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="mapa.html">Ubicación</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="login.php">Iniciar sesión</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="registro.php">Registrarse</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contáctenos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <h1 class="display-4">Nuestra Ubicación</h1>
+            <p class="lead">Encuéntrenos en San José, Costa Rica</p>
+        </div>
+    </div>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mb-4">
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.openstreetmap.org/export/embed.html?bbox=-84.08104062080383%2C9.939380968676307%2C-84.07752156257631%2C9.941756074474688&amp;layer=mapnik" 
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                        <a href="https://www.openstreetmap.org/?#map=19/9.940569/-84.079281" 
+                           target="_blank" 
+                           class="map-link">
+                            <i class="fas fa-external-link-alt"></i> Ver el mapa más grande
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-info-box">
+                        <h4>Información de Contacto</h4>
+                        <div class="contact-info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Dirección</strong><br>
+                                San José, Costa Rica<br>
+                                Avenida Central, Calle 10
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>Teléfono</strong><br>
+                                +506 1234-5678
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong><br>
+                                info@2worktransport.cr
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Horario de Atención</strong><br>
+                                Lunes a Viernes: 7:00 AM - 6:00 PM<br>
+                                Sábados: 8:00 AM - 12:00 PM
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-box">
+                        <h4>¿Cómo Llegar?</h4>
+                        <p><strong>Transporte Público:</strong></p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-bus text-secondary"></i> Rutas: 1, 2, 3, 5, 7</li>
+                        </ul>
+                        <p><strong>En Vehículo:</strong></p>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-car text-secondary"></i> Parqueo disponible</li>
+                            <li><i class="fas fa-parking text-secondary"></i> Estacionamiento cercano</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5><i class="fas fa-bus"></i> 2Work Transport</h5>
+                    <p>Transporte ejecutivo de calidad para empresas en Costa Rica.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Enlaces Rápidos</h5>
+                    <div class="footer-links">
+                        <a href="index.html">Inicio</a>
+                        <a href="acerca.html">Acerca de</a>
+                        <a href="servicios.html">Servicios</a>
+                        <a href="mapa.html">Ubicación</a>
+                        <a href="contacto.html">Contáctenos</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Contacto</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> San José, Costa Rica</p>
+                    <p><i class="fas fa-phone"></i> +506 1234-5678</p>
+                    <p><i class="fas fa-envelope"></i> info@2worktransport.cr</p>
+                </div>
+            </div>
+            <hr style="border-color: rgba(255,255,255,0.1);">
+            <div class="text-center">
+                <p>&copy; 2024 2Work Transport Services. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

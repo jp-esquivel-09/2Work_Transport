@@ -1,0 +1,369 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - 2Work Transport Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --secondary-color: #f97316;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+        }
+
+        .navbar {
+            background-color: var(--primary-color);
+            padding: 1rem 0;
+        }
+
+        .navbar-brand {
+            color: white !important;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .nav-link {
+            color: rgba(255, 255, 255, 0.9) !important;
+            margin: 0 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--secondary-color) !important;
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 4rem 0;
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-card .icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card .icon i {
+            font-size: 2.5rem;
+            color: white;
+        }
+
+        .service-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-list li i {
+            color: var(--secondary-color);
+            margin-right: 0.5rem;
+        }
+
+        .benefit-box {
+            background: #f9fafb;
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            height: 100%;
+        }
+
+        .benefit-box i {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary-color);
+        }
+    </style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-bus"></i> 2Work Transport
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="acerca.html">Acerca de</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="servicios.html">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mapa.html">Ubicación</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="login.php">Iniciar sesión</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="registro.php">Registrarse</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contáctenos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <h1 class="display-4">Nuestros Servicios</h1>
+            <p class="lead">Soluciones de transporte diseñadas para su empresa</p>
+        </div>
+    </div>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="service-card">
+                        <div class="icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Transporte Corporativo</h3>
+                        <p>Nuestro servicio principal está diseñado para empresas que desean ofrecer a sus colaboradores una solución de transporte confiable y cómoda para sus desplazamientos diarios al trabajo.</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> Rutas personalizadas según las necesidades de su empresa</li>
+                            <li><i class="fas fa-check-circle"></i> Horarios flexibles adaptados a su jornada laboral</li>
+                            <li><i class="fas fa-check-circle"></i> Pases mensuales con tarifas preferenciales</li>
+                            <li><i class="fas fa-check-circle"></i> Seguimiento GPS en tiempo real</li>
+                            <li><i class="fas fa-check-circle"></i> Conductores profesionales con amplia experiencia</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="icon">
+                            <i class="fas fa-route"></i>
+                        </div>
+                        <h3>Rutas Especiales</h3>
+                        <p>Diseñamos rutas específicas para eventos corporativos, capacitaciones, convenciones y otras actividades empresariales que requieran movilización de grupos.</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> Planificación de rutas optimizadas</li>
+                            <li><i class="fas fa-check-circle"></i> Servicio para eventos empresariales</li>
+                            <li><i class="fas fa-check-circle"></i> Coordinación logística completa</li>
+                            <li><i class="fas fa-check-circle"></i> Atención personalizada durante el evento</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Transporte para Colaboradores</h3>
+                        <p>Facilitamos el desplazamiento de sus colaboradores desde diferentes puntos de la ciudad hasta su lugar de trabajo, mejorando su calidad de vida y puntualidad.</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> Múltiples puntos de abordaje</li>
+                            <li><i class="fas fa-check-circle"></i> Sistema de reservas en línea</li>
+                            <li><i class="fas fa-check-circle"></i> Notificaciones y alertas automáticas</li>
+                            <li><i class="fas fa-check-circle"></i> Reportes mensuales de uso</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h3>Contratos Mensuales</h3>
+                        <p>Ofrecemos planes de contratación mensual que le permiten a su empresa y a sus colaboradores disfrutar de nuestros servicios de manera continua con beneficios exclusivos.</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> Tarifas preferenciales por volumen</li>
+                            <li><i class="fas fa-check-circle"></i> Prioridad en reservas</li>
+                            <li><i class="fas fa-check-circle"></i> Soporte dedicado</li>
+                            <li><i class="fas fa-check-circle"></i> Facturación corporativa simplificada</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Beneficios de Nuestro Servicio</h2>
+            <div class="row mt-4">
+                <div class="col-md-3 mb-4">
+                    <div class="benefit-box">
+                        <i class="fas fa-clock"></i>
+                        <h5>Ahorro de Tiempo</h5>
+                        <p>Sus colaboradores aprovechan el tiempo de viaje para descansar o trabajar</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="benefit-box">
+                        <i class="fas fa-dollar-sign"></i>
+                        <h5>Reducción de Costos</h5>
+                        <p>Disminuya gastos en combustible, parqueo y mantenimiento vehicular</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="benefit-box">
+                        <i class="fas fa-leaf"></i>
+                        <h5>Eco-Friendly</h5>
+                        <p>Contribuya a reducir la huella de carbono de su empresa</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="benefit-box">
+                        <i class="fas fa-smile"></i>
+                        <h5>Bienestar</h5>
+                        <p>Mejore la satisfacción y calidad de vida de sus empleados</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title">Características de Nuestra Flotilla</h2>
+                    <p class="lead mb-4">Todos nuestros autobuses cuentan con:</p>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <i class="fas fa-snowflake text-primary fa-2x mb-2"></i>
+                            <p>Aire acondicionado</p>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <i class="fas fa-wifi text-primary fa-2x mb-2"></i>
+                            <p>WiFi gratuito</p>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <i class="fas fa-chair text-primary fa-2x mb-2"></i>
+                            <p>Asientos reclinables ergonómicos</p>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <i class="fas fa-usb text-primary fa-2x mb-2"></i>
+                            <p>Puertos USB para carga</p>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <i class="fas fa-video text-primary fa-2x mb-2"></i>
+                            <p>Sistema de entretenimiento</p>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <i class="fas fa-shield-alt text-primary fa-2x mb-2"></i>
+                            <p>Sistemas de seguridad avanzados</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5><i class="fas fa-bus"></i> 2Work Transport</h5>
+                    <p>Transporte ejecutivo de calidad para empresas en Costa Rica.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Enlaces Rápidos</h5>
+                    <div class="footer-links">
+                        <a href="index.html">Inicio</a>
+                        <a href="acerca.html">Acerca de</a>
+                        <a href="servicios.html">Servicios</a>
+                        <a href="mapa.html">Ubicación</a>
+                        <a href="contacto.html">Contáctenos</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5>Contacto</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> San José, Costa Rica</p>
+                    <p><i class="fas fa-phone"></i> +506 1234-5678</p>
+                    <p><i class="fas fa-envelope"></i> info@2worktransport.cr</p>
+                </div>
+            </div>
+            <hr style="border-color: rgba(255,255,255,0.1);">
+            <div class="text-center">
+                <p>&copy; 2024 2Work Transport Services. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
